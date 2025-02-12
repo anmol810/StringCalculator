@@ -15,4 +15,7 @@ describe("negative value check", () => {
   test("returns false since array does not contains any negative value", () => {
     expect(isNegativeValuePresentInArray([1, 2, 3, 4, 5])).toBe(false);
   });
+  test("returns true since array does not contains any negative value", () => {
+    expect(isNegativeValuePresentInArray([1, 2, -3, 4, 5])).toBe(true);
+  });
 });
