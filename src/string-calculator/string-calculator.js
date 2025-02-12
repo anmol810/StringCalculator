@@ -15,6 +15,7 @@ function add(userInput) {
       `negative numbers not allowed ${negativeNumbers.join(", ")}`
     );
   }
+  // returns sumation of all the values
   return computeSum(inputArray);
 }
 module.exports = add;
