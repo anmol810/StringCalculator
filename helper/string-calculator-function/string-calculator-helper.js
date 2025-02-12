@@ -1,10 +1,10 @@
 function computeSum(nums) {
   return nums.reduce((sum, curr) => sum + curr, 0);
 }
-function isNegativeValuePresentInArray(nums) {
+function negativeValuePresentInArray(nums) {
   const negativeNumberArray = nums.filter((num) => num < 0);
-  if (!negativeNumberArray.length) return false;
-  else return true;
+  if (!negativeNumberArray.length) return negativeNumberArray;
+  else return negativeNumberArray;
 }
 function parseInput(userInput) {
   let numbersStr = userInput;
@@ -22,4 +22,4 @@ function parseInput(userInput) {
     .filter((str) => str !== "") // Remove empty values
     .map(Number);
 }
-module.exports = { computeSum, isNegativeValuePresentInArray, parseInput };
+module.exports = { computeSum, negativeValuePresentInArray, parseInput };
