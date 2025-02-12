@@ -5,3 +5,6 @@ test("returns 0 when the user input is empty string", () => {
 test("returns sumation of string with multiple input value", () => {
   expect(add("1,2,3")).toBe(6);
 });
+test("returns sumation of string with delimetre like , and \n", () => {
+  expect(add("1,2,\n3")).toBe(6);
+});
