@@ -16,3 +16,6 @@ test("throws an errror if the userInput contains negative value", () => {
     expect(error.message).toBe("userInput cannot contain negative value");
   }
 });
+test("returns sumation of string with delimetre and starting with //", () => {
+  expect(add("//;\n1;2")).toBe(6);
+});
