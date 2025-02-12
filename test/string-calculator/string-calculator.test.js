@@ -13,7 +13,7 @@ test("throws an errror if the userInput contains negative value", () => {
     add("1,-2,\n3");
   } catch (error) {
     expect(error).toBeInstanceOf(Error);
-    expect(error.message).toBe("userInput cannot contain negative value");
+    expect(error.message).toBe("negative numbers not allowed -2");
   }
 });
 test("returns sumation of string with delimetre and starting with //", () => {
