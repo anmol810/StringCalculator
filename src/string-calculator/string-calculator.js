@@ -8,6 +8,10 @@ function add(userInput) {
   if (!userInput || !userInput.length) return 0;
   //parsing the userInput
   const inputArray = parseInput(userInput);
+  // check for validity of the userInput
+  if (isNegativeValuePresentInArray(inputArray)) {
+    throw new Error("userInput cannot contain negative value");
+  }
   return computeSum(inputArray);
 }
 module.exports = add;
