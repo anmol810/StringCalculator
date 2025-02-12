@@ -1,5 +1,3 @@
-const { delimiter } = require("../../constant/string-constant");
-
 function computeSum(nums) {
   return nums.reduce((sum, curr) => sum + curr, 0);
 }
@@ -9,13 +7,19 @@ function isNegativeValuePresentInArray(nums) {
   else return true;
 }
 function parseInput(userInput) {
-  return userInput
+  let numbersStr = userInput;
+  let delimiter = ",";
+  // Check if the string starts with "//[delimiter]\n"
+  const customDelimiterMatch = userInput.match(/^\/\/(.+)\n/);
+  if (customDelimiterMatch) {
+    delimiter = customDelimiterMatch[1]; // Extract delimiter
+    numbersStr = userInput.slice(customDelimiterMatch[0].length); // Remove delimiter declaration
+  }
+
+  return numbersStr
     .split(delimiter)
-    .filter((value) => {
-      return value.length > 0;
-    })
-    .map((value) => {
-      return Number(value);
-    });
+    .map((str) => str.trim()) // Trim spaces/newlines
+    .filter((str) => str !== "") // Remove empty values
+    .map(Number);
 }
 module.exports = { computeSum, isNegativeValuePresentInArray, parseInput };
