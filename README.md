@@ -15,4 +15,6 @@ This project is a simple string calculator that parses and sums numbers from an 
    git clone https://github.com/your-username/string-calculator.git
    cd string-calculator
    ```
-2. Run npm install
+2. ```sh
+   run npm install
+   ```
