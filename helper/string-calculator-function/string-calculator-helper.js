@@ -4,5 +4,6 @@ function computeSum(nums) {
 function isNegativeValuePresentInArray(nums) {
   const negativeNumberArray = nums.filter((num) => num < 0);
   if (!negativeNumberArray.length) return false;
+  else return true;
 }
 module.exports = { computeSum, isNegativeValuePresentInArray };
