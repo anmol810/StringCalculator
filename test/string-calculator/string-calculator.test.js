@@ -8,3 +8,11 @@ test("returns sumation of string with multiple input value", () => {
 test("returns sumation of string with delimetre like , and \n", () => {
   expect(add("1,2,\n3")).toBe(6);
 });
+test("throws an errror if the userInput contains negative value", () => {
+  try {
+    add("1,-2,\n3");
+  } catch (error) {
+    expect(error).toBeInstanceOf(Error);
+    expect(error.message).toBe("userInput cannot contain negative value");
+  }
+});
