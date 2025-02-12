@@ -19,3 +19,10 @@ describe("negative value check", () => {
     expect(isNegativeValuePresentInArray([1, 2, -3, 4, 5])).toBe(true);
   });
 });
+
+// test to parse userInput
+describe("negative value check", () => {
+  test("returns false since array does not contains any negative value", () => {
+    expect(parseInput("1, 2, 3, 4, 5")).toEqual([1, 2, 3, 4, 5]);
+  });
+});
