@@ -1,6 +1,6 @@
 const {
   computeSum,
-  isNegativeValuePresentInArray,
+  negativeValuePresentInArray,
   parseInput,
 } = require("../../helper/string-calculator-function/string-calculator-helper");
 function add(userInput) {
@@ -9,8 +9,11 @@ function add(userInput) {
   //parsing the userInput
   const inputArray = parseInput(userInput);
   // check for validity of the userInput
-  if (isNegativeValuePresentInArray(inputArray)) {
-    throw new Error("userInput cannot contain negative value");
+  const negativeNumbers = negativeValuePresentInArray(inputArray);
+  if (negativeNumbers.length) {
+    throw new Error(
+      `negative numbers not allowed ${negativeNumbers.join(", ")}`
+    );
   }
   return computeSum(inputArray);
 }
