@@ -1,6 +1,7 @@
 const {
   computeSum,
   isNegativeValuePresentInArray,
+  parseInput,
 } = require("../../../helper/string-calculator-function/string-calculator-helper"); // Adjust path as needed
 
 // test to find the sum of the array
@@ -22,7 +23,7 @@ describe("negative value check", () => {
 
 // test to parse userInput
 describe("negative value check", () => {
-  test("returns false since array does not contains any negative value", () => {
-    expect(parseInput("1, 2, 3, 4, 5")).toEqual([1, 2, 3, 4, 5]);
+  test("returns the array after parsing the string", () => {
+    expect(parseInput("1,\n2,3,4,5")).toEqual([1, 2, 3, 4, 5]);
   });
 });
