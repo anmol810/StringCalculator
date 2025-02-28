@@ -19,3 +19,9 @@ test("throws an errror if the userInput contains negative value", () => {
 test("returns sumation of string with delimetre and starting with //", () => {
   expect(add("//;\n1;2")).toBe(3);
 });
+test("throws an errror if the userInput contains negative value", () => {
+  const t = () => {
+    add("2,5,a,6,b");
+  };
+  expect(t).toThrow("alphabets are not allowed a, b");
+});

@@ -24,6 +24,6 @@ describe("negative value check", () => {
 // test to parse userInput
 describe("negative value check", () => {
   test("returns the array after parsing the string", () => {
-    expect(parseInput("1,\n2,3,4,5")).toEqual([1, 2, 3, 4, 5]);
+    expect(parseInput("1,\n2,3,4,5")).toEqual(["1", "2", "3", "4", "5"]);
   });
 });
